@@ -17,5 +17,5 @@ Proof of Concept
  Document Root
  Share Name
  Share Name
-5) the payload used jaVasCript: <script>alert(1)</script>
-6) the xss will execute on all the parameters
+5. The payload used JavaScript: <script>alert(1)</script>
+6. The xss will execute on all the parameters
